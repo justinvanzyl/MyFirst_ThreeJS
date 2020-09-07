@@ -1,4 +1,14 @@
-# MyFirst_ThreeJS
-Following a video tutorial on getting started with ThreeJS.
+Justin van Zyl, 35324554
+COS3712 - 2020, Semester 2
+Assignment 1, 827397
 
-tutorial link: https://www.youtube.com/watch?v=6oFvqLfRnsU
+
+
+TODO:
+context menu functionality
+loop trees + introduce randomness
+fog
+texturing
+add an igloo door
+lower roof apex
+use a merge somewhere

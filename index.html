@@ -12,12 +12,37 @@
 
 </head>
 <body>
+	<div class="buttoncontainer">
+		<button class="btn" id="rotation" onclick="toggleRotation()">TOGGLE ROTATION</button>
+		<button class="btn" id="direction" onclick="toggleDirection()"">CHANGE DIRECTION</button>
+	</div>
 
-	<h1>Welcome To Farmland!</h1>
+	<div class="slidecontainer">
+		<p>Zoom:</p>
+		<input class="slider" id="zoom" type="range" min="1" max="10" value="2" onchange="updateZoom(value)">
+		<p>Speed:</p>
+		<input class="slider" id="speed" type="range" min="1" max="10" value="2" onchange="updateSpeed(value)">
+	</div>
 
-	<script src="./libs/three.js"></script>
+	<div id="context-menu">
+		<div class="item">
+		  <i class="zoom-in"></i> Zoom In
+		</div>
+		<div class="item">
+		  <i class="zoom-out"></i> Zoom Out
+		</div>
+		<div class="item">
+		  <i class="reverse"></i> Reverse Rotation
+		</div>
+		<hr>
+		<div class="item">
+		  <i class="exit"></i> Exit
+		</div>
+	  </div>
+
+	<script src="./libs/Three.js"></script>
 	<script src="./libs/ThreeBSP.js"></script>
-	<script src="./libs/dat.gui.js"></script>
+	<!-- <script src="./libs/dat.gui.js"></script> -->
 	<!-- <script src="./libs/spin.js"></script> -->
 	<!-- <script src="./libs/tween.min.js"></script> -->
 
