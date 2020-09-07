@@ -20,27 +20,24 @@
     var raycaster = new THREE.Raycaster();
     var mouse = new THREE.Vector2();
 
-/*
-    var geometry = new THREE.SphereGeometry(1, 4, 4);
-    var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
+// WATER TANK:
+    var geometry = new THREE.CylinderGeometry(3, 3, 20);
+    var material = new THREE.MeshStandardMaterial({color: 0xADB2BD});
     var mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
-*/
 
-    var geometry = new THREE.BoxGeometry(1, 1, 1);
-    var material = new THREE.MeshLambertMaterial({color: 0xF7F7F7});
-//		var mesh = new THREE.Mesh(geometry, material);
-//		scene.add(mesh);
+// HOUSE (BARN):
+    // walls:
+    var geometry = new THREE.BoxGeometry(6, 4, 6);
+    var material = new THREE.MeshStandardMaterial({color: 0xF2DFB4});
+    var mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
 
-    meshX = -10;
-    for (var i = 0; i<15; i++) {
-        var mesh = new THREE.Mesh(geometry, material);
-        mesh.position.x = (Math.random() - 0.5) * 10;
-        mesh.position.y = (Math.random() - 0.5) * 10;
-        mesh.position.z = (Math.random() - 0.5) * 10;
-        scene.add(mesh);
-        meshX += 1;
-    }
+    // roof:
+    var geometry = new THREE.ConeGeometry(6, 3, 4);
+    var material = new THREE.MeshStandardMaterial({color: 0xF2DFB4});
+    var mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
 
 
 //		mesh.position.set(2, 2, -2);
@@ -78,7 +75,7 @@
             this.tl = new TimelineMax();
             this.tl.to(intersects[i].object.scale, 1, {x: 2, ease: Expo.easeOut})
             this.tl.to(intersects[i].object.scale, .5, {x: .5, ease: Expo.easeOut})
-            this.tl.to(intersects[i].object.position, .5, {x: 2, ease: Expo.easeOut})
+            this.tl.to(intersects[i].object.position, .5, {z: -.5, ease: Expo.easeOut})
             this.tl.to(intersects[i].object.rotation, .5, {y: Math.PI *.5, ease: Expo.easeOut}, "= -1.5")
         }
     }
