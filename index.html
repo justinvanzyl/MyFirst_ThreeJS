@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
 	<title>Farmland</title>
+
 	<meta name="author" content="Justin van Zyl (35324554)"/>
-	<meta name="description" content="COS3712-: 2020, Semester 2, Assignment 1 (827397)"/> 
+	<meta name="description" content="COS3712-: 2020, Semester 2, Assignment 1 (827397)"/>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/main.css">
-
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
-
 </head>
 <body>
 	<div class="buttoncontainer">
@@ -25,26 +24,23 @@
 	</div>
 
 	<div id="context-menu">
-		<div class="item">
-		  <i class="zoom-in"></i> Zoom In
+		<div class="item" onclick="increaseZoom()">
+		  <i class="zoom_in">Zoom In</i>
 		</div>
-		<div class="item">
-		  <i class="zoom-out"></i> Zoom Out
+		<div class="item" onclick="decreaseZoom()">
+		  <i class="zoom_out">Zoom Out</i>
 		</div>
-		<div class="item">
-		  <i class="reverse"></i> Reverse Rotation
+		<div class="item" onclick="toggleDirection()">
+		  <i class="reverse">Reverse Rotation</i>
 		</div>
 		<hr>
-		<div class="item">
-		  <i class="exit"></i> Exit
+		<div class="item" onclick="window.open('', '_self', ''); window.close();">
+		  <i class="exit">Exit</i>
 		</div>
 	  </div>
 
 	<script src="./libs/Three.js"></script>
 	<script src="./libs/ThreeBSP.js"></script>
-	<!-- <script src="./libs/dat.gui.js"></script> -->
-	<!-- <script src="./libs/spin.js"></script> -->
-	<!-- <script src="./libs/tween.min.js"></script> -->
 
 	<script type="text/javascript" src="./scripts/farm.js"></script>
 </body>
