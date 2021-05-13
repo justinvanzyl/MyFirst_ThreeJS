@@ -1,13 +1,4 @@
-Justin van Zyl, 35324554
-COS3712 - 2020, Semester 2
-Assignment 1, 827397
+Semester 2 2020
+Assignment 1
 
-
-
-TODO:
-context menu functionality,
-loop trees + introduce randomness,
-fog,
-texturing,
-add an igloo door,
-lower roof apex
+an intro project to using threejs.
